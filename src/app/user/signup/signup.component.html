@@ -1,0 +1,69 @@
+
+  <!-- Start Hero -->
+  <div class="container-fluid" id="new">
+     
+    <div class="container d-flex justify-content-center align-items-center align-self-center"  style="height: 93.2vh;">
+      <div>
+        <div class="card bg-white shadow-sm rounded-3 border-0 p-3" style="width: 48rem;">
+        <div class="card-body text-center">
+          <img class="py-3" src="assets/img/logo.svg" alt="" width="100px">
+          <h3 class="fw-bolder mb-3">User Signup</h3>
+          <p>Hey,Enter your details to get Signup to your account</p>
+          <div class="py-3">
+            <form class="row g-3 needs-validation" [formGroup]="signForm" (ngSubmit)="onSubmit()">
+              <div class="col-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" formControlName="name" class="form-control " placeholder="firstname" autocomplete="off">
+                  <label for="floatingInput">Username <span style="color: red;">*</span></label>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="email" formControlName="email" class="form-control " placeholder="firstname" autocomplete="off">
+                  <label for="floatingInput">Email <span style="color: red;">*</span></label>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <select class="form-select" formControlName="gender" aria-label="Default select example">
+                    <option selected value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                  <label for="floatingSelect">Gender</label>
+              </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="date" formControlName="birthDate" class="form-control " placeholder="firstname" autocomplete="off">
+                  <label for="floatingInput">Birthday Date <span style="color: red;">*</span></label>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="phone" formControlName="phone"  class="form-control" placeholder="lastname" autocomplete="off">
+                  <label for="floatingInput">Phone Number <span style="color: red;">*</span></label>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="password" formControlName="password"  class="form-control " placeholder="********"
+                    autocomplete="off">
+                  <label for="floatingInput">Password <span style="color: red;">*</span></label>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-12">
+                <button class="btn text-dark w-50" id="commonbg" type="submit">Sign up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- End Hero -->

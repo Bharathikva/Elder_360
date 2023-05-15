@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    height: fit-content;
+}
+
+#loginbg {
+    background: #f5f2ea;
+}
+
+#commonbg {
+    background-color: #fdc886;
+    color: #0000;
+}
+
+#new{
+    position: relative;
+    background-image: url('../src/assets/img/bg.svg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* .card {
+    position: relative;
+    background-image: url('../src/assets/img/tic-tac-toe.png');
+    background-size: cover;
+    background-position: center;
+  } */
+  
+ 

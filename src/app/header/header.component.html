@@ -1,0 +1,34 @@
+<!-- Start Header Section -->
+<div class="container-fluid bg-white shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg  bg-transparent py-3">
+            <a class="navbar-brand fs-3 fw-bolder" routerLink=""> Elder 360</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+
+                <ul class="navbar-nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2">Home</a></li>
+                    <li><a href="#" class="nav-link px-2">About Us</a></li>
+                    <li><a href="#" class="nav-link px-2">How to use</a></li>
+                </ul>
+
+                <div class="navbar-nav col-md-4 text-end justify-content-end">
+                    <span class="fs-4 me-4" *ngIf="username; else signIn" routerLink="/"><i class="bi bi-person-circle me-2"></i><span class="fs-5">{{ username }}
+                    <button type="button" routerLink="" (click)="logout()"  class="btn btn-new rounded-4"><i class="bi bi-box-arrow-right fw-bold"></i></button>
+                    </span>                
+                </span>
+                    <ng-template #signIn>
+                         <button type="button" routerLink="/login" class="btn text me-2">sign in</button>
+                    <button type="button" routerLink="/signup" class="btn btn-new rounded-4">Register</button>
+                    </ng-template>
+                   
+                </div>
+            </div>
+        </nav>
+    </div>
+   
+</div>
+<!-- End Header Section -->

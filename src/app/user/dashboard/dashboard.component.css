@@ -1,0 +1,31 @@
+main {
+	padding: 20px;
+}
+
+.about-us {
+	margin-bottom: 20px;
+}
+
+.about-us h2 {
+	margin-top: 0;
+}
+
+.services ul {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+}
+
+.hero {
+	background-image: url('https://thumbs.dreamstime.com/b/tender-caregiver-saying-goodbye-to-elderly-pensioner-whe-wheelchair-day-care-facility-companion-pushing-other-people-121130396.jpg');
+	background-size: cover;
+	color: #000000;
+	padding: 100px;
+	text-align: center;
+}

@@ -1,0 +1,74 @@
+<section class="vh-100">
+      <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-md-9 col-lg-6 col-xl-5">
+                  <img src="assets/img/elder.jpg"
+                      class="img-fluid" alt="Sample image">
+              </div>
+              <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                      <!-- Email input -->
+                      <div class="col-12 mb-3" *ngIf="hidebutton">
+                        
+                          <div class="form-floating">
+                            <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                              maxlength="10" type="phone" formControlName="phoneNumber" class="form-control" id="floatingInput"
+                              placeholder="h" autocomplete="off">
+                            <label for="floatingInput">Phone Number: <span style="color: red;">*</span></label>
+                          </div>
+                          
+                          <div class="d-flex justify-content-between align-items-center mt-1">
+                              <!-- Checkbox -->
+                              <div class="form-check mb-0">
+                                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                  <label class="form-check-label" for="form2Example3">
+                                      Remember me
+                                  </label>
+                              </div>
+                              <a href="#!" class="text-body">Forgot password?</a>
+                          </div>
+                          <button class="btn btn-primary mt-3" type="submit">Send OTP</button>
+                        </div>
+                     
+        
+        
+                        <div class="col-12 mb-3">
+                          <div *ngIf="showOTPForm">
+                            <div class="text-end">
+                              <p>{{newOtp}}</p>
+                            </div>
+                            <div class="d-flex mb-3" style="align-items: center;">
+                              <span class="me-3">OTP sent to {{ form.value.phoneNumber }} </span><a href="#"
+                                class="fs-3" (click)="back()"><i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                            <div class="mb-3">
+                              <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)"
+                                [config]="{length:4,inputClass:'dot',allowNumbersOnly:true}" #otpInput></ng-otp-input>
+                            </div>
+                            <button class="btn btn-primary me-3" type="submit" (click)="onVerifyOTP()">Verify
+                              OTP</button>
+                            <!-- <span *ngIf="otp" class="o-t-p">Entered otp :-{{otp}}</span> -->
+        
+                            <button class="btn" type="submit">Resend OTP</button>
+        
+        
+                          </div>
+        
+                        </div>
+  
+  
+                     
+  
+                      <div class="text-center text-lg-start ">
+                          <!-- <button type="button" class="btn btn-primary btn-lg"
+                              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button> -->
+                          <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/signup"
+                                  class="link-danger">Register</a></p>
+                      </div>
+  
+                  </form>
+              </div>
+          </div>
+      </div>
+ 
+  </section>

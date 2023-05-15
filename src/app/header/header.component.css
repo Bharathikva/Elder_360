@@ -1,0 +1,30 @@
+.btn-new {
+    background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+    color: white;
+    font-weight: 600;
+}
+
+.logo{
+    color: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+}
+
+.text {
+    font-family: 'Satoshi' sans-serif;
+    font-weight: 600;
+    color: #4461F2;
+}
+
+.navbar-nav li{
+ font-weight: 600;
+}
+
+.navbar-nav li a:hover{
+    color: #6F3AFA;
+}
+
+.navbar-nav li a:focus{
+    color: #6F3AFA;
+}
+
+
+
