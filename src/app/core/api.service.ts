@@ -10,12 +10,12 @@ import { User } from '../model/User.response';
   providedIn: 'root'
 })
 export class ApiService {
-  @Inject(API)
-  private readonly apiEndPoints!:API
+  // @Inject(API)
+  // private readonly apiEndPoints!:API
 
   // baseurl= development.baseUrl;
 
-  constructor(private http: HttpClient, private router: Router,) { }
+  constructor(private http: HttpClient, private router: Router, private readonly apiEndPoints:API) { }
 
   login(loginPayload:any):Observable<any>{
     return this.http.post<any>(this.apiEndPoints.LOGIN,loginPayload)
