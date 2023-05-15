@@ -1,18 +1,24 @@
-const development = {
+require('dotenv').config();
+import { env } from 'process';
 
-  baseUrl: "http://localhost:8080",
+import { Injectable } from '@angular/core';
 
-  login:'/user/login',
+const BASEURL: string = env['BASEURL'] + '';
+@Injectable()
+export class API {
+  //  = 'http://localhost:8080',
 
-  signUp:'/user/signup',
+  LOGIN = BASEURL + '/user/login';
 
-  hello:'/user',
+  SIGNUP = BASEURL + '/user/signup';
 
-  sendOtp:'/user/login',
+  PROFILE = BASEURL + '/user';
 
-  verifyOTP:'/user/verify-otp',
+  SEND_OTP = BASEURL + '/user/login';
 
-  order:'/orders/pay'
+  VERIFY_OTP = BASEURL + '/user/verify-otp';
 
+  PAY_ORDER = BASEURL + '/orders/pay';
 }
-export default development
+
+// export default new API;
