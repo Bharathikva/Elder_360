@@ -1,12 +1,12 @@
-require('dotenv').config();
-import { env } from 'process';
+import * as dotenv from "dotenv";
+// import { env } from 'process';
 
 import { Injectable } from '@angular/core';
 
-const BASEURL: string = env['BASEURL'] + '';
+const BASEURL: string = process.env['BASEURL'] + '';
+console.log("elll",BASEURL)
 @Injectable()
 export class API {
-  //  = 'http://localhost:8080',
 
   LOGIN = BASEURL + '/user/login';
 

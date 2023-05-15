@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
 import { ApiResponse } from '../model/api.response.service';
-import development from '../core/url-handler.service'
+import {API} from '../core/url-handler.service'
 import { User } from '../model/User.response';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class ApiService {
   @Inject(API)
   private readonly apiEndPoints!:API
 
-  baseurl= development.baseUrl;
+  // baseurl= development.baseUrl;
 
   constructor(private http: HttpClient, private router: Router,) { }
 
@@ -22,7 +22,7 @@ export class ApiService {
   };
 
   signUp(user:User):Observable<ApiResponse>{
-    return this.http.post<ApiResponse>(this.apiEndPoints.SIGN_UP,user)
+    return this.http.post<ApiResponse>(this.apiEndPoints.SIGNUP,user)
   }
 
   hello():Observable<any>{
